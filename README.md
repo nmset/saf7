@@ -11,10 +11,18 @@ DBus. It runs on the system bus, and hence, must be run as root.
 
 USAGE
 It must be started with two mandatory parameters :
+
+
     --jid (-j) : a valid XMPP jid, the sender : ex. srv-admin@srv.domain.tld
     --password (-w) : the sender's authotization token to connect to the server
+    
+    
 Optional parameters may be used :
+
+
     --resource (-r) : XMPP ressource label, default : SAF
+    
+    
     --server (-s) : overrides the server part of the sender's jid
     --port (-p) : overrides default XMPP 5222 port, default : 5222 nevertheless
     --retry (-y) : Number of times to try to connect to server, default = 0 
