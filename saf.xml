@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <node name="/xmpp/saf">
+    <interface name="xmpp.saf">
+        <method name="Quit">
+            <arg/>
+        </method>
+        <method name="SendMsg">
+            <arg type="s" name="recipient" direction="in"/>
+            <arg type="s" name="msg" direction="in"/>
+        </method>
+    </interface>
+</node>

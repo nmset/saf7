@@ -1,0 +1,23 @@
+jid=user@host.domain.tld
+password=your_password
+
+#resource : Optional. Default : SAF
+#resource=SAF
+
+#server : Optional
+#server=host.domain.tld
+
+#port : Optional. Default : 5222
+#port=5222
+
+#bustag : Optional. Default : default
+#bustag=default
+
+#retry : Optional. Number of times to try a connection. Default = 0 (for ever)
+#retry=0
+
+#delay : Optional. Number of seconds between each connection attempt. Default = 30
+#delay=30
+
+#wsping : Optional. Number of seconds between each whitespace ping to the server, default = 0 (never), at least 55
+#wsping=0

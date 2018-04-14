@@ -1,0 +1,14 @@
+[Unit]
+Description=XMPP send and forget : saf7
+Requires=network.target
+After=network.target
+
+[Service]
+Type=dbus
+BusName=xmpp.saf-default
+ExecStart=/usr/local/bin/saf7 -c /usr/local/etc/saf7/saf7-default.rc
+User=root
+
+[Install]
+WantedBy=multi-user.target
+

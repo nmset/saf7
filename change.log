@@ -1,0 +1,25 @@
+2018-04-14
+Move to github.com
+
+2017-06-02
+Version 4
+- Added a check for gcc version. Compile will succeed with gcc7.1 if
+DBUS_HAS_RECURSIVE_MUTEX is defined.
+- Added a DEVTIME preprocessor definition in the Debug config. This allows
+contextual automatic selection of the bus to use when compiling.
+
+2017-05-16
+Version 3
+- Added an optional possibility to ping the server regularly.
+- Tries to reconnect to the server if it goes down, or not yet up. Exits in all 
+other cases a connection cannot be completed.
+
+2017-05-12
+Version 2
+- Tries to connect many times on start.
+- Tries to reconnect many times if server is shut down.
+- Can exit immediately any time through signaling.
+TODO : Detect and react to vanishing network link.
+
+2017-05-08
+Initial release, version 1.
