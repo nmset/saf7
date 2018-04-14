@@ -10,6 +10,7 @@ It uses gloox as XMPP library, and messages are sent to the application via
 DBus. It runs on the system bus, and hence, must be run as root.
 
 USAGE
+
 It must be started with two mandatory parameters :
 
 
@@ -31,6 +32,7 @@ Optional parameters may be used :
     
 
 DBUS CONSIDERATIONS
+
 A policy file must be created in /etc/dbus-1/system.d/ , because the 
 application requests the system bus. A sample file is in the release package. 
 If --bustag is used, another policy file must be created to reflect this 
@@ -52,6 +54,7 @@ If a bustag parameter is used, the created DBus destination is
 application simultaneously, each instance having a different configuration file.
 
 XMPP NOTE
+
 If the same sender's XMPP account is used in multiple instances, or on multiple 
 hosts, a different resource parameter MUST be used for each instance.
 
@@ -72,5 +75,6 @@ FILES IN THE RELEASE ARCHIVE
 After installation, create a default /usr/local/etc/saf7/saf7-default.rc file with valid parameters.
 
 DISCLAIMER
+
 I don't claim the application is fit for any purpose.Programming is just my hobby.
 

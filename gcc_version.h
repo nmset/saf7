@@ -1,5 +1,5 @@
 /* 
- * Author: SET - nmset@netcourrier.com
+ * Author: SET - nmset@yandex.com
  * License : GPL v2
  * Copyright SET - © 2017
  *
