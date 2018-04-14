@@ -72,4 +72,3 @@ default /usr/local/etc/saf7/saf7-default.rc file with valid parameters.
 DISCLAIMER
 I don't claim the application is fit for any purpose.Programming is just my hobby.
 
-Cheers !
