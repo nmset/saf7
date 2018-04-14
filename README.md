@@ -20,7 +20,6 @@ It must be started with two mandatory parameters :
 Optional parameters may be used :
 
     --resource (-r) : XMPP ressource label, default : SAF
-    
     --server (-s) : overrides the server part of the sender's jid
     --port (-p) : overrides default XMPP 5222 port, default : 5222 nevertheless
     --retry (-y) : Number of times to try to connect to server, default = 0 (for ever)
@@ -56,21 +55,21 @@ XMPP NOTE
 If the same sender's XMPP account is used in multiple instances, or on multiple 
 hosts, a different resource parameter MUST be used for each instance.
 
+
 FILES IN THE RELEASE ARCHIVE
+
  -All project files as a NetBeans project.
+ 
  -Convenience files :
-    saf7_SendMsg.sh : a bash script to send a message. It accepts the 
-recipient's address, the message, and optionally the bustag parameter if 
-relevant.
-    saf7_Quit.sh : a bash script to stop the application. Only root can do that, 
-as per applied DBus policy. It optionally accepts the bustag parameter.
+ 
+    saf7_SendMsg.sh : a bash script to send a message. It accepts the recipient's address, the message, and optionally the bustag parameter if relevant.
+    saf7_Quit.sh : a bash script to stop the application. Only root can do that, as per applied DBus policy. It optionally accepts the bustag parameter.
     saf7-default.rc.template : can simplify creating a configuration file.
-    saf7-default.conf : a DBus policy file for the default instance. Create 
-another one if bustag is used.
-    saf7-default.service : a systemd service file for the default instance. 
-Create another service file if bustag is used.
-    PKGBUILD : to create an Arch's package. After installation, create a 
-default /usr/local/etc/saf7/saf7-default.rc file with valid parameters.
+    saf7-default.conf : a DBus policy file for the default instance. Create another one if bustag is used.
+    saf7-default.service : a systemd service file for the default instance. Create another service file if bustag is used.
+    
+
+After installation, create a default /usr/local/etc/saf7/saf7-default.rc file with valid parameters.
 
 DISCLAIMER
 I don't claim the application is fit for any purpose.Programming is just my hobby.
