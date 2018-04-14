@@ -19,22 +19,17 @@ It must be started with two mandatory parameters :
     
 Optional parameters may be used :
 
-
     --resource (-r) : XMPP ressource label, default : SAF
-    
     
     --server (-s) : overrides the server part of the sender's jid
     --port (-p) : overrides default XMPP 5222 port, default : 5222 nevertheless
-    --retry (-y) : Number of times to try to connect to server, default = 0 
-(for ever)
-    --delay (-d) : Number of seconds between each connection attempt,default = 
-30
-    --wsping (-g) : Number of seconds between each whitespace ping to the server 
-, default = 0 (never), at least 55
+    --retry (-y) : Number of times to try to connect to server, default = 0 (for ever)
+    --delay (-d) : Number of seconds between each connection attempt,default = 30
+    --wsping (-g) : Number of seconds between each whitespace ping to the server , default = 0 (never), at least 55
     --bustag (-t) : a suffix to the 'xmpp.saf-' bus name, default : default
-    --config (-c) : a simple key=value file, where above parameters can be 
-saved for simplicty
+    --config (-c) : a simple key=value file, where above parameters can be saved for simplicty
     --verbose (-v) : Show messages. Command line only.
+    
 
 DBUS CONSIDERATIONS
 A policy file must be created in /etc/dbus-1/system.d/ , because the 
