@@ -1,4 +1,6 @@
 build/
 .kdev4
 saf7.kdev4
+Resources/Lokalize/main.lqa
+Resources/Lokalize/*/saf7.mo
 

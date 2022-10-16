@@ -55,14 +55,14 @@ void SAFConnListener::onConnect()
     m_lastError = ConnectionError::ConnNoError;
     m_connector->ResetCounter();
     if (g_verbose)
-        cout << "Connected (" << m_client->jid().bare() << ")." << endl;
+        cout << _("Connected (") << m_client->jid().bare() << ")." << endl;
 }
 
 void SAFConnListener::onDisconnect(ConnectionError e)
 {
     m_lastError = e;
     if (g_verbose)
-        cout << "Disconnected (" << m_client->jid().bare() << ")." << endl;
+        cout << _("Disconnected (") << m_client->jid().bare() << ")." << endl;
     if (e == ConnNoError || e == ConnUserDisconnected) return;
     cout << ConnErrorMap[e] << endl;
 }
@@ -111,20 +111,20 @@ void Connector::DoConnect()
              */
             && m_saf->GetLastError() != ConnectionError::ConnConnectionRefused)
         {
-            cout << "Cannot initiate a connection."
-                    " Check network, server, or parameters." << endl;
+            cout << _("Cannot initiate a connection."
+                    " Check network, server, or parameters.") << endl;
             break;
         }
         if (g_verbose)
-            cout << "Try " << m_count
-                << " : Waiting " << m_delay << " seconds"
-                << " before connecting..." << endl;
+            cout << _("Try ") << m_count
+                << _(" : Waiting ") << m_delay << " seconds"
+                << _(" before connecting...") << endl;
         sleep(m_delay);
         m_count++;
         if (m_retry > 0 && m_count == m_retry)
         {
             if (g_verbose)
-                cout << "Giving up." << endl;
+                cout << _("Giving up.") << endl;
             break;
         }
     }

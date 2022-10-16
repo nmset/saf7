@@ -65,7 +65,7 @@ void signalhandler(int sn)
     delete g_client;
     delete g_saf;
     if (g_verbose)
-        cout << "Signaled to exit." << endl;
+        cout << _("Signaled to exit.") << endl;
     exit(0);
 }
 
@@ -76,17 +76,17 @@ bool GetAndValidateParams(int argc, char** argv)
         po::options_description desc(_ABOUT_);
         desc.add_options()
             ("help,h", "Print help messages")
-            ("jid,j", po::value<string>(&g_jid), "Full JID without resource")
-            ("password,w", po::value<string>(&g_password), "Password")
-            ("resource,r", po::value<string>(&g_resource), "Resource (optional)")
-            ("server,s", po::value<string>(&g_server), "Server (optional)")
-            ("port,p", po::value<uint>(&g_port), "Port (optional), default = 5222")
-            ("retry,y", po::value<uint>(&g_retry), "Number of times to try to connect to server (optional), default = 0 (for ever)")
-            ("delay,d", po::value<uint>(&g_delay), "Number of seconds between each connection attempt (optional), default = 30")
-            ("wsping,g", po::value<uint>(&g_wsping), "Number of seconds between each whitespace ping to the server (optional), default = 0 (never), at least 55")
-            ("bustag,t", po::value<string>(&g_tag), "Bus name tag (optional), default=default")
-            ("config,c", po::value<string>(&g_config), "Use specified configuration file (optional), else, pass all parameters on the command line")
-            ("verbose,v", "Show messages (optional). Command line only.");
+            ("jid,j", po::value<string>(&g_jid), _("Full JID without resource"))
+            ("password,w", po::value<string>(&g_password), _("Password"))
+            ("resource,r", po::value<string>(&g_resource), _("Resource (optional)"))
+            ("server,s", po::value<string>(&g_server), _("Server (optional)"))
+            ("port,p", po::value<uint>(&g_port), _("Port (optional), default = 5222"))
+            ("retry,y", po::value<uint>(&g_retry), _("Number of times to try to connect to server (optional), default = 0 (for ever)"))
+            ("delay,d", po::value<uint>(&g_delay), _("Number of seconds between each connection attempt (optional), default = 30"))
+            ("wsping,g", po::value<uint>(&g_wsping), _("Number of seconds between each whitespace ping to the server (optional), default = 0 (never), at least 55"))
+            ("bustag,t", po::value<string>(&g_tag), _("Bus name tag (optional), default=default"))
+            ("config,c", po::value<string>(&g_config), _("Use specified configuration file (optional), else, pass all parameters on the command line"))
+            ("verbose,v", _("Show messages (optional). Command line only."));
 
         po::variables_map vm;
         po::variables_map vmc;
@@ -112,7 +112,7 @@ bool GetAndValidateParams(int argc, char** argv)
                 ifstream f(g_config);
                 if (f.fail())
                 {
-                    cerr << "Failure with file : " << g_config << endl;
+                    cerr << _("Failure with file : ") << g_config << endl;
                     return 0;
                 }
                 po::store(po::parse_config_file(f, desc), vmc);
@@ -121,29 +121,29 @@ bool GetAndValidateParams(int argc, char** argv)
         }
         catch (po::error& eb)
         {
-            cerr << "Error : " << eb.what() << endl;
+            cerr << _("Error : ") << eb.what() << endl;
             return 0;
         }
     }
     catch (exception& e)
     {
-        cerr << "Error : " << e.what() << endl;
+        cerr << _("Error : ") << e.what() << endl;
         return 0;
     }
 
     if (g_jid.empty())
     {
-        cout << "jid missing." << endl;
+        cout << _("jid missing.") << endl;
         return 0;
     }
     if (g_password.empty())
     {
-        cout << "password missing." << endl;
+        cout << _("password missing.") << endl;
         return 0;
     }
     if (g_wsping > 0 && g_wsping < 55 )
     {
-        cout << "wsping must be at least 55 seconds." << endl;
+        cout << _("wsping must be at least 55 seconds.") << endl;
         return 0;
     }
     return true;
@@ -167,7 +167,10 @@ DBusSafAdaptor* StartDBusAdaptor(Connector * connector, SAFConnListener * saf)
 
 int main(int argc, char** argv)
 {
-
+    setlocale (LC_ALL, "");
+    bindtextdomain (_APPNAME_, "/usr/local/share/locale"); // containing fr/LC_MESSAGES/
+    textdomain (_APPNAME_);
+    
     if (!GetAndValidateParams(argc, argv))
         return 0;
 

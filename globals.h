@@ -10,8 +10,12 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
+#include <libintl.h>
 #include <string>
 using namespace std;
+
+//https://www.labri.fr/perso/fleury/posts/programming/a-quick-gettext-tutorial.html
+#define _(STRING) gettext(STRING)
 
 #define _APPNAME_ "saf7" // Send and forget
 #define _APP_DESCRIPTION_ "Send and forget an XMPP message"

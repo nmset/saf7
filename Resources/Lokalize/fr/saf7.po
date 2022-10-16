@@ -1,0 +1,129 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Saleem EDAH-TALLY <set@nmset.info>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-16 12:34+0200\n"
+"PO-Revision-Date: 2022-10-16 12:55+0200\n"
+"Last-Translator: Saleem EDAH-TALLY <set@nmset.info>\n"
+"Language-Team: French <>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 22.08.2\n"
+
+#: ../../SAF.cpp:58
+msgid "Connected ("
+msgstr "Connecté ("
+
+#: ../../SAF.cpp:65
+msgid "Disconnected ("
+msgstr "Déconnecté ("
+
+#: ../../SAF.cpp:114
+msgid "Cannot initiate a connection. Check network, server, or parameters."
+msgstr ""
+"Ne peut initialiser une connexion. Vérifiez le réseau, le serveur ou les"
+" paramètres."
+
+#: ../../SAF.cpp:119
+msgid "Try "
+msgstr "Essai"
+
+#: ../../SAF.cpp:120
+msgid " : Waiting "
+msgstr " : Attente"
+
+#: ../../SAF.cpp:121
+msgid " before connecting..."
+msgstr " avant reconnexion"
+
+#: ../../SAF.cpp:127
+msgid "Giving up."
+msgstr "Abandon."
+
+#: ../../main.cpp:68
+msgid "Signaled to exit."
+msgstr "Signal d'arrêt."
+
+#: ../../main.cpp:79
+msgid "Full JID without resource"
+msgstr "JID complet sans la partie 'resource'"
+
+#: ../../main.cpp:80
+msgid "Password"
+msgstr "Mot de passe"
+
+#: ../../main.cpp:81
+msgid "Resource (optional)"
+msgstr "Resource (optionnel)"
+
+#: ../../main.cpp:82
+msgid "Server (optional)"
+msgstr "Serveur (optionnel)"
+
+#: ../../main.cpp:83
+msgid "Port (optional), default = 5222"
+msgstr "Port (optionnel), par défaut : 5222"
+
+#: ../../main.cpp:84
+msgid ""
+"Number of times to try to connect to server (optional), default = 0 (for "
+"ever)"
+msgstr ""
+"Nombre de tentative de reconnexion au serveur (optionnel), par défaut : 0"
+" (tentatives permanentes)"
+
+#: ../../main.cpp:85
+msgid ""
+"Number of seconds between each connection attempt (optional), default = 30"
+msgstr "Délai entre les tentatives de connexion (optionnel), par défaut : 30"
+
+#: ../../main.cpp:86
+msgid ""
+"Number of seconds between each whitespace ping to the server (optional), "
+"default = 0 (never), at least 55"
+msgstr ""
+"Délai entre les pings de maintien de connexion au serveur (optionnel), par"
+" défaut : 0 (jamais), au moins 55"
+
+#: ../../main.cpp:87
+msgid "Bus name tag (optional), default=default"
+msgstr "Étiquette du bus (optionnel), défaut : default"
+
+#: ../../main.cpp:88
+msgid ""
+"Use specified configuration file (optional), else, pass all parameters on "
+"the command line"
+msgstr ""
+"Utiliser un fichier de configuration (optionnel), ou fournir tous les"
+" paramètres à la ligne de commande"
+
+#: ../../main.cpp:89
+msgid "Show messages (optional). Command line only."
+msgstr "Sortie verbeuse (optionnel). Ligne de commande uniquement."
+
+#: ../../main.cpp:115
+msgid "Failure with file : "
+msgstr "Échec avec le fichier :"
+
+#: ../../main.cpp:124 ../../main.cpp:130
+msgid "Error : "
+msgstr "Erreur :"
+
+#: ../../main.cpp:136
+msgid "jid missing."
+msgstr "jid manquant."
+
+#: ../../main.cpp:141
+msgid "password missing."
+msgstr "Mot de passe manquant."
+
+#: ../../main.cpp:146
+msgid "wsping must be at least 55 seconds."
+msgstr "wsping doit être au moins 55 secondes."
