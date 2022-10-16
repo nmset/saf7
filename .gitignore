@@ -1,2 +1,4 @@
-dist/
 build/
+.kdev4
+saf7.kdev4
+

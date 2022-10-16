@@ -3,8 +3,7 @@ License : GPL v2
 
 This application is designed to send XMPP messages to arbitrary recipients 
 without expecting a reply. It is intended to run on servers to forward messages 
-to admins. Repeated problems with similar tools after system upgrade on Arch 
-Linux motivated writing this application.
+to admins.
 
 It uses gloox as XMPP library, and messages are sent to the application via 
 DBus. It runs on the system bus, and hence, must be run as root.
@@ -61,7 +60,7 @@ hosts, a different resource parameter MUST be used for each instance.
 
 FILES IN THE RELEASE ARCHIVE
 
- -All project files as a NetBeans project.
+ -All project files as a CMake project.
  
  -Convenience files :
  
@@ -76,5 +75,5 @@ After installation, create a default /usr/local/etc/saf7/saf7-default.rc file wi
 
 DISCLAIMER
 
-I don't claim the application is fit for any purpose.Programming is just my hobby.
+saf7 does not claim to be fit for any purpose. Use at your own risks.
 
