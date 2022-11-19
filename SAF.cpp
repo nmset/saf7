@@ -1,8 +1,8 @@
 /* 
  * File:   SAF.cpp
- * Author: SET - nmset@yandex.com
+ * Author: Saleem Edah-Tally - nmset@yandex.com
  * License : GPL v2
- * Copyright SET - © 2017
+ * Copyright Saleem Edah-Tally - © 2017
  * 
  * Created on 6 mai 2017, 21:50
  */
